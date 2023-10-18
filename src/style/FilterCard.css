@@ -4,6 +4,8 @@
 
 
 .f-button-container{
+    display: flex;
+    flex-direction: column;
     background-color: rgb(64, 65, 65);
     margin: 5px 0 15px 0;
 }
@@ -29,6 +31,7 @@
 .f-pre_next{
     margin: 20px 0 30px 0;
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 .f-pre_next-b{
@@ -39,6 +42,11 @@
     font-weight: 800;
     border: none;
     cursor: pointer;
+}
+.f-active-page{
+    font-weight: 700;
+    padding: 10px 20px;
+    background-color: #FFD700;
 }
 
 @media only screen and (max-width: 920px){

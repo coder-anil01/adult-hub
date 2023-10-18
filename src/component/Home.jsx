@@ -16,17 +16,16 @@ const Home = () => {
 
 
     const apiLink = `https://www.eporner.com/api/v2/video/search/?query=${query}&per_page=80&page=${page}&thumbsize=big&order=top-weekly&gay=${gay}&lq=${quality}&format=json`
+    useEffect(()=>{
     const getData = async()=>{
       setProgress(70)
       const response = await axios.get(apiLink)
         setData(response.data.videos)
         setProgress(100)
         console.log(response.data.videos)
-    }
-
-    useEffect(()=>{
+    };
         getData();
-    },[apiLink])
+      }, [apiLink]);
 
 //=> PAGINATION
     const handlepre = ()=>{
@@ -43,18 +42,18 @@ const Home = () => {
 //=> query
     const handleQuery = (e)=>{
       setQuery(e)
-      getData();
+      // getData();
       setProgress(30)
     }
     const handleGay = (e)=>{
       setGay(e)
-      getData();
+      // getData();
       setProgress(30)
     }
 //=> quality
     const handleQuality =(e)=>{
       setquality(e)
-      getData();
+      // getData();
       setProgress(30)
     }
 
@@ -90,6 +89,7 @@ const Home = () => {
         {data && <VideoCard data={data}/>}
       <div className="f-pre_next">
         <button className="f-pre_next-b"disabled={page<=1} onClick={handlepre}>⬅ previous</button>
+        <div className='f-active-page'>{page}</div>
         <button className="f-pre_next-b" onClick={handleNext}>next ➢</button>
       </div>
       </div>
