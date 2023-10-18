@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/adult-hub/static/css/main.ce88b9be.css",
+    "main.js": "/adult-hub/static/js/main.67ea52c4.js",
+    "static/js/787.87da74a9.chunk.js": "/adult-hub/static/js/787.87da74a9.chunk.js",
+    "static/media/navlogo.jpeg": "/adult-hub/static/media/navlogo.702423793def095d96c6.jpeg",
+    "index.html": "/adult-hub/index.html",
+    "main.ce88b9be.css.map": "/adult-hub/static/css/main.ce88b9be.css.map",
+    "main.67ea52c4.js.map": "/adult-hub/static/js/main.67ea52c4.js.map",
+    "787.87da74a9.chunk.js.map": "/adult-hub/static/js/787.87da74a9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce88b9be.css",
+    "static/js/main.67ea52c4.js"
+  ]
+}
