@@ -7,8 +7,20 @@ import '../style/FilterCard.css'
 
 const Home = () => {
 
+  const newYear = new Date(new Date().getFullYear(), 0, 1); // January is month 0
+
+  // Get the current date
+  const currentDate = new Date();
+
+  // Calculate the time difference in milliseconds
+  const timeDifference = currentDate - newYear;
+
+  // Convert milliseconds to days
+  const daysCounted = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+
   const [data, setData] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(daysCounted);
   const[query, setQuery] =useState('all');
   const [gay, setGay] = useState('0');
   const [quality, setquality] = useState('1');
